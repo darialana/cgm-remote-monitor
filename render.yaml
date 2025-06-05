@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: nightscout
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://flashbackdraggi88:Vmy2PnTcUwxgVZS6@cluster0.rjmc7sh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - key: API_SECRET
+        value: QWerty12345
+      - key: DISPLAY_UNITS
+        value: mmol
+      - key: ENABLE
+        value: basal iob cob pump careportal openaps
