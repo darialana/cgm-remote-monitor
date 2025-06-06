@@ -3,6 +3,7 @@ services:
     name: nightscout
     env: node
     plan: free
+    nodeVersion: 18.20.3         # Добавь эту строку — важно без точки в конце!
     buildCommand: npm install
     startCommand: node server.js
     envVars:
